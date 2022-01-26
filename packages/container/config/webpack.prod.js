@@ -8,6 +8,7 @@ const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
+    publicPath: '/container/latest/', // public path is use to prepend the given to the src script
   },
   plugins: [
     new ModuleFederationPlugin({
