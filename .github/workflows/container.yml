@@ -1,8 +1,6 @@
 name: deploy-container
 
 on:
-  check_run:
-    types: [rerequested, completed]
   push:
     branches:
       - master
