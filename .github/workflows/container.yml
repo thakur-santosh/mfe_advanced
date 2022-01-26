@@ -2,8 +2,11 @@ name: deploy-containers
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+    paths:
+      - 'packages/container/**'
+  pull_request:
+    branches: [ master ]
     paths:
       - 'packages/container/**'
 
@@ -14,7 +17,6 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: action/checkout@v2
       - run: npm install
